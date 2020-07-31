@@ -3,6 +3,7 @@ let myFont;
 var acceleration = 0.0099;
 var nDrops = 1200;
 var drops = [];
+var cnv;
 
 function preload() {
   img = loadImage('assets/plant.png'); //plant image
@@ -12,8 +13,7 @@ function preload() {
 }
 
 function setup() {
-  createCanvas(670, 750);
-
+  cnv=createCanvas(670, 750);
   for (i = 0; i < nDrops; i++) {
     drops.push(new Drop());
   }
